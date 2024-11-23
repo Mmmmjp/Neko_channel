@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,20 +11,31 @@
 <body>
 <h1>Nekoちゃんねる</h1>
 
-<P>ようこそNekoちゃんねるへ<br>
-    猫のように気ままに日々の何気ない物事をつぶやく為だけのシンプルで自由な掲示板です。<br>
-    お腹へったな～。今日は何を食べたい！週末は何をしよう。。<br>
-    どんな些細なことでもかまいません。<br>
+<h2>🐾Nekoちゃんねるへようこそ🐾</h2>
 
-    猫になった気分になって、気軽に猫仲間たちと会話を始めましょう。
-</P>
+<p>
+    ここは気軽に自由につぶやける、ゆる～い掲示板だよ！<br>
+    「お腹すいた～」「今日は何食べようかな？」「週末はゴロゴロしたい...」<br>
+    そんな気ままなつぶやきを猫みたいにポンっと残してみてね。
+</p>
 
+<p>
+    深いことは考えず、のんびり気軽に。<br>
+    つぶやいているうちに、ちょっと楽しくなるかも🐾<br>
+    さぁ、あなたの「にゃー！」を届けてみよう！
+</p>
+
+<c:if test="${not empty errorMsg}">
+    <p style="color: red;">${errorMsg}</p>
+</c:if>
 <form action="Login" method="post">
     <label for="name">猫ID</label>
     <input type="text" name="name" placeholder="Your name">
-
+    <br>
     <label for="password">パスワード</label>
     <input type="password" name="pass" placeholder="Your password">
+    <br>
+    <input type="submit" value="ログイン"> 
 </form>
 </body>
 </html>

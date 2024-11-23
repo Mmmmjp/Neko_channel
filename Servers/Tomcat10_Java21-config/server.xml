@@ -140,7 +140,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      </Host>
+      <Context docBase="Neko_channel" path="/Neko_channel" reloadable="false" source="org.eclipse.jst.jee.server:Neko_channel"/></Host>
     </Engine>
   </Service>
 </Server>

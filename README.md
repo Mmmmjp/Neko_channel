@@ -1,10 +1,12 @@
-# Neko_channel
+# Neko_channel[ApplicationSpce ver]
 A casual message board for carefree chatting🐈
 
 ## 概要
 WEBアプリケーションの開発練習として簡単な掲示板を作成。
 今回はデータベースを使用せず、ログイン中のユーザの情報や投稿されたテキストは
 アプリケーションスコープのインスタンスとしてArrayListに格納し、そこから取り出す。
+
+またスコープからインスタンスを取得する際には、EL式を使用。その際にJSTLも利用
 
 ## 機能
 - **ログイン機能**
@@ -26,26 +28,29 @@ WEBアプリケーションの開発練習として簡単な掲示板を作成�
 
 ## directory図
 ```
-Neko_channel/
-├── java/
-│   ├── controller/
-│   │   ├── Login.java
-│   │   ├── Logout.java
-│   │   └── Main.java
-│   └── model/
-│       ├── LoginLogic.java
-│       ├── PostMutterLogic.java
-│       ├── User.java (javaBeans)
-│       └── Mutter.java (javaBeans)
-└── webapp/
-    ├── css/
-    ├── images/
-    ├── WEB-INF/
-    │   └── views/
-    │       ├── loginResult.jsp
-    │       ├── logout.jsp
-    │       └── main.jsp
-    └── index.jsp
+.
+└── Neko_channel/
+    ├── java/
+    │   ├── controller /
+    │   │   ├── Login.java
+    │   │   ├── Logout.java
+    │   │   └── Main.java
+    │   ├── filter/
+    │   │   └── setSetEncodingFilter.java
+    │   └── model /
+    │       ├── LoginLogic.java
+    │       ├── PostMutterLogic.java
+    │       ├── User.java
+    │       └── Mutter.java
+    └── webapp/
+        ├── css
+        ├── images
+        ├── WEB-INF/
+        │   └── views /
+        │       ├── loginResult.jsp
+        │       ├── logout.jsp
+        │       └── main.jsp
+        └── index.jsp
 ```
 
 ## その他
