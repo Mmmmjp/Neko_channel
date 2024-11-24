@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Nekoちゃんねる</title>
 </head>
 <body>
 
+<h1>Nekoちゃんねる</h1>
+
+<h2>ログアウト</h2>
+
+<p>また遊びに来てね</p>
+
+<a href="index.jsp">TOPへ</a>
 </body>
 </html>
